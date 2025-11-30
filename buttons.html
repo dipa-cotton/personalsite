@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>blog-dipa</title>
+  <title>buttons-dipa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -13,22 +13,28 @@
     <a href="blog.html">blog</a>
     <a href="socials.html">socials</a>
     <a href="buttons.html">buttons</a>
+    <a href="portfolio.html">portfolio</a>
   </nav>
 </header>
 <body>
     <div class="content">
-<a href="https://codingcorner.dev/">
-  <img
-    alt="Coding Corner"
-    src="https://codingcorner.dev/buttons/codingcorner.png"
-    width="88"
-    height="31"
-  />
-</a>
+    <h1>cool buttons!! :D</h1>
+    <div class="copy-container">
+  <button id="copyBtn" class="copy-button">click here to copy my button!</button>
+  <img src="https://dipa-cotton.github.io/personalsite/dipa's%20button.png" alt="dipa's button" width="176" height="62" class="preview">
+</div>
+<p id="copiedMessage" class="copied-msg">copied!</p>
 <a href="https://dipa-cotton.github.io/personalsite/">
   <img
     alt="dipa's site"
     src="https://dipa-cotton.github.io/personalsite/dipa's%20button.png"
+    width="88"
+    height="31"
+  />
+<a href="https://codingcorner.dev/">
+  <img
+    alt="Coding Corner"
+    src="https://codingcorner.dev/buttons/codingcorner.png"
     width="88"
     height="31"
   />
@@ -102,6 +108,30 @@
     width="88"
     height="31"
     />
-
 </div>
+<script>
+document.getElementById("copyBtn").addEventListener("click", () => {
+  
+  // the code you want people to copy:
+  const buttonCode = `<a href="https://dipa-cotton.github.io/personalsite/">
+  <img
+    alt="dipa's site"
+    src="https://dipa-cotton.github.io/personalsite/dipa's%20button.png"
+    width="88"
+    height="31"
+    />`;
+
+  navigator.clipboard.writeText(buttonCode)
+    .then(() => {
+      const msg = document.getElementById("copiedMessage");
+      msg.style.opacity = "1";
+
+      setTimeout(() => {
+        msg.style.opacity = "0";
+      }, 1200);
+    });
+});
+</script>
+
 </body>
+
