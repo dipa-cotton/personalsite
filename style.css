@@ -67,8 +67,8 @@ a:hover {
 }
 .btn {
   display: inline-block;
-  padding: 50px 100px;  /* bigger padding = bigger button */
-  font-size: 3rem;   /* larger text = bigger button */
+  padding: 50px 100px; 
+  font-size: 3rem;   
   background: #709ad1;
   color: white;
   border-radius: 10px;
@@ -113,7 +113,7 @@ a:hover {
 }
 
 .lightbox {
-  display: none; /* hidden until clicked */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -194,6 +194,6 @@ a:hover {
 }
 .copy-container {
   display: flex;
-  align-items: center;   /* <-- aligns vertically */
-  gap: 20px;             /* space between button + image */
+  align-items: center; 
+  gap: 20px; 
 }
