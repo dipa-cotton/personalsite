@@ -7,6 +7,9 @@
 </head>
 <header class="header">
   <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
     <a href="index.html">home</a>
     <a href="projects.html">projects</a>
     <a href="now.html">now</a>
@@ -199,4 +202,10 @@ prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   openLightbox();
 });
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
 </script>
