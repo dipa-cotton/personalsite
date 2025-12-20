@@ -168,49 +168,50 @@
   <span id="nextBtn" class="arrow right">▶</span>
 </div>
 <script>
-const images = document.querySelectorAll('.thumb');
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightboxImage');
+ const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-const closeBtn = document.getElementById('closeBtn');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// lightbox logic
+const images = document.querySelectorAll(".thumb");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".close");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
 let currentIndex = 0;
 
 // open lightbox
 images.forEach((img, index) => {
-  img.addEventListener('click', () => {
+  img.addEventListener("click", () => {
     currentIndex = index;
     openLightbox();
   });
 });
 
 function openLightbox() {
-  lightbox.style.display = 'flex';
+  lightbox.style.display = "flex";
   lightboxImage.src = images[currentIndex].src;
 }
 
 // close lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
 });
 
 // next image
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % images.length;
   openLightbox();
 });
 
 // previous image
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   openLightbox();
 });
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
 </script>
