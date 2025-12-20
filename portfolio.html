@@ -157,12 +157,11 @@
   </div>
 </div>
 
-<div id="lightbox" class="lightbox">
-  <span id="closeBtn" class="close">×</span>
-
-  <span id="prevBtn" class="arrow left">◀</span>
-  <img id="lightboxImage" class="lightbox-img">
-  <span id="nextBtn" class="arrow right">▶</span>
+<div class="lightbox">
+  <span class="close">×</span>
+  <span class="arrow prev">‹</span>
+  <img class="lightbox-img" src="" alt="">
+  <span class="arrow next">›</span>
 </div>
 <script>
  const menuToggle = document.getElementById("menu-toggle");
@@ -177,8 +176,8 @@ const images = document.querySelectorAll(".thumb");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".close");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".arrow.next");
+const prevBtn = document.querySelector(".arrow.prev");
 
 let currentIndex = 0;
 
