@@ -114,7 +114,8 @@
     width="88"
     height="31"
     />
-</div>
+</a>
+    <br>
 <script>
 document.getElementById("copyBtn").addEventListener("click", () => {
   
@@ -137,8 +138,32 @@ document.getElementById("copyBtn").addEventListener("click", () => {
     });
 });
 </script>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 <script src="https://pagering.gideon.sh/embed.js" defer></script>
 
 <pagering-link theme="dark" style="margin-top: 8px"></pagering-link>
+
+<script>
+  const Toggle = document.querySelector(".toggle");
+  const Links = document.querySelector(".links");
+
+  Toggle.addEventListener("click", () => {
+    Links.classList.toggle("show");
+  });
+</script>
+    <h6>
+      ↑
+      <br>
+      click the link above to enter the page webring, where you can explore other awesome sites made by other awesome hack clubbers around the world!
+      <br>
+  </h6>
+  </div>
 </body>
 
